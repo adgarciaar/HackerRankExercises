@@ -117,6 +117,7 @@ def bottomUpApproach(a, b):
     
     M = [[False]*( len(b)+1 ) for i in range( len(a)+1 )] 
     
+    M[0][0] = True
     for i in range(1, len(a)+1):
         if( a[i-1].islower() ):
             M[i][0] = True
@@ -129,7 +130,6 @@ def bottomUpApproach(a, b):
                 M[i][j] = M[i-1][j-1]
             else:
                 if( a[i-1].lower() == b[j-1].lower() ):
-                    # handling repeated letters
                     M[i][j] = M[i-1][j-1] or M[i-1][j] 
                 else:
                     ver = False
