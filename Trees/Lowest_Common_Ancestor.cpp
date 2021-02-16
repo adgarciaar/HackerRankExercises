@@ -41,23 +41,6 @@ class Node {
 };
 
 */
-    /*
-    bool search(Node *root, int v) {
-        if(root->data == v){
-            return true;
-        }else{
-            bool searchRigthSubTree = false;
-            bool searchLeftSubTree = false;
-            if( root->right != NULL){
-                searchRigthSubTree = search(root->right, v);
-            }
-            if( root->left != NULL){
-                searchLeftSubTree = search(root->left, v);
-            }
-            return ( searchRigthSubTree || searchLeftSubTree );
-        }
-    }
-    */
 
     Node *lca(Node *root, int v1,int v2) {
 		    // Write your code here.
